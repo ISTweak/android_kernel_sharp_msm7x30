@@ -1,0 +1,13 @@
+#
+# Broadcom BtHid device configuration
+#
+
+menu "Bluetooth Hid driver"
+
+config BROADCOM_BTHID_DRIVER
+	bool "Broadcom BtHid driver"
+	default y
+	help
+	  Enable Broadcom BtHid device driver.
+
+endmenu

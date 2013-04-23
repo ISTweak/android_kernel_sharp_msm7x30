@@ -1,0 +1,36 @@
+#
+# Proximity device configuration
+#
+# drivers/sharp/proximity/Kconfig
+
+menu "Proximity Configuration"
+
+config SENSORS_PROXIMITY
+	tristate "Proximity Sensor Driver"
+	depends on I2C
+
+config PROXIMITY_IRQ_SETTING
+	int "PROXIMITY IRQ Setting"
+	depends on SENSORS_PROXIMITY
+	range 0 3
+	default "0"
+
+config PROXIMITY_SENSITIVITY_SETTING
+	int "PROXIMITY Sensitivity Setting"
+	depends on SENSORS_PROXIMITY
+	range 0 2
+	default "0"
+
+config PROXIMITY_POWER_SUPPLY_SETTING
+	int "PROXIMITY Power Supply Setting"
+	depends on SENSORS_PROXIMITY
+	range 0 1
+	default "0"
+
+config PROXIMITY_WAKESW
+	bool "Proximity WAKESW"
+	depends on SENSORS_PROXIMITY
+	default n
+
+endmenu
+

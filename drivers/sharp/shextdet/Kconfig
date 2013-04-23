@@ -1,0 +1,21 @@
+# drivers/sharp/shextdet/Kconfig
+
+menu "SHARP ExtDev Device Drivers"
+
+config SHEXTDEV
+	bool "SHARP ExtDev Device Drivers"
+	depends on MSM_RPCSERVER_HANDSET
+	default y
+
+config SHEXTDEV_FLIP
+	bool "SHARP ExtDev Flip Device Drivers"
+	depends on MSM_RPCSERVER_HANDSET
+
+config SHEXTDEV_SWIVEL
+	bool "SHARP ExtDev Swivel Device Drivers"
+	depends on MSM_RPCSERVER_HANDSET
+
+config USB_SWIC
+	bool "USB switch IC Driver"
+
+endmenu

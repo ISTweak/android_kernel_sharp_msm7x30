@@ -1,0 +1,9 @@
+#
+# Makefile for the linux kernel.
+#
+
+EXTRA_CFLAGS += -DSTHENO_BLK_BOUNCE_ANY
+EXTRA_CFLAGS += -DBACKWARD_COMPATIBILITY
+# EXTRA_CFLAGS += -DDEBUG_LOG
+
+obj-$(CONFIG_SHSD_DRIVER) += stheno_kernel.o

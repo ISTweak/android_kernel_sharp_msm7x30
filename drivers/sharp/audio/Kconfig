@@ -1,0 +1,39 @@
+#
+# audio device configuration
+#
+# CONFIG_SH_AUDIO_DRIVER newly created
+
+menu "SHARP audio driver"
+
+comment "SHARP audio drivers"
+
+config SH_AUDIO_DRIVER
+	tristate "SHARP Audio Driver customized"
+	default y
+
+config SH_AUDIO_DRIVER_MODEL_NUMBER
+	int "SH_AUDIO_DRIVER_MODEL_NUMBER"
+	range 0 999
+	default "0"
+
+config SHSPAMP_AK7833
+	tristate "SHARP spamp ak7833"
+	default y
+
+config SHSPAMP_AN12969
+	tristate "SHARP spamp an12969"
+	default n
+
+config SHSPAMP_AK7811
+	tristate "SHARP spamp ak7811"
+	default n
+
+config SHVIBRATOR_LINEAR
+	tristate "SHARP vibrator LINEAR"
+	default n
+
+config SHVIBRATOR
+	tristate "SHARP vibrator"
+	default y
+
+endmenu

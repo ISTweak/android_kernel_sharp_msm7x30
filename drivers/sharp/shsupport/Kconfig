@@ -1,0 +1,10 @@
+#
+# shsupport device configuration
+#
+
+comment "for supporttool"
+
+config SHSUPPORT_CUST
+	bool "SH SUPPORT TOOL"
+	default y
+

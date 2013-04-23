@@ -1,0 +1,83 @@
+#
+# Sharp Touchscreen configuration
+#
+
+menuconfig TOUCHSCREEN_SHTPS
+	bool "sharp touchscreens"
+	default y
+
+if TOUCHSCREEN_SHTPS
+
+	config SHTPS_SY3000_TM1836_001
+		tristate "SY3000 TM1836-001"
+		default n
+		depends on TOUCHSCREEN_SHTPS
+
+	if SHTPS_SY3000_TM1836_001
+		source "drivers/sharp/shtps/sy3000/tm1836-001/Kconfig"
+	endif # SHTPS_SY3000_TM1836_001
+
+	config SHTPS_SY3000_TM1901_001
+		tristate "SY3000 TM1901_001"
+		default n
+		depends on TOUCHSCREEN_SHTPS
+
+	if SHTPS_SY3000_TM1901_001
+		source "drivers/sharp/shtps/sy3000/tm1901-001/Kconfig"
+	endif # SHTPS_SY3000_TM1901_001
+
+	config SHTPS_SY3000_TM1918_001
+		tristate "SY3000 TM1918_001"
+		default n
+		depends on TOUCHSCREEN_SHTPS
+
+	if SHTPS_SY3000_TM1918_001
+		source "drivers/sharp/shtps/sy3000/tm1918-001/Kconfig"
+	endif # SHTPS_SY3000_TM1918_001
+
+	config SHTPS_SY3000_TM1963_001
+		tristate "SY3000 TM1963_001"
+		default n
+		depends on TOUCHSCREEN_SHTPS
+
+	if SHTPS_SY3000_TM1963_001
+		source "drivers/sharp/shtps/sy3000/tm1963-001/Kconfig"
+	endif # SHTPS_SY3000_TM1963_001
+
+	config SHTPS_SY3000_TM1980_001
+		tristate "SY3000 TM1980_001"
+		default n
+		depends on TOUCHSCREEN_SHTPS
+
+	if SHTPS_SY3000_TM1980_001
+		source "drivers/sharp/shtps/sy3000/tm1980-001/Kconfig"
+	endif # SHTPS_SY3000_TM1980_001
+
+	config SHTPS_TMA3XX_TMA340_003
+		tristate "TMA3XX TMA340-003"
+		default n
+		depends on TOUCHSCREEN_SHTPS
+
+	if SHTPS_TMA3XX_TMA340_003
+		source "drivers/sharp/shtps/tma3xx/tma340-003/Kconfig"
+	endif # SHTPS_TMA3XX_TMA340_003
+
+	config SHTPS_TMA3XX_TMA340_004
+		tristate "TMA3XX TMA340-004"
+		default n
+		depends on TOUCHSCREEN_SHTPS
+
+	if SHTPS_TMA3XX_TMA340_004
+		source "drivers/sharp/shtps/tma3xx/tma340-004/Kconfig"
+	endif # SHTPS_TMA3XX_TMA340_004
+
+	config SHTPS_TMA3XX_TMA340_005
+		tristate "TMA3XX TMA340-005"
+		default n
+		depends on TOUCHSCREEN_SHTPS
+
+	if SHTPS_TMA3XX_TMA340_005
+		source "drivers/sharp/shtps/tma3xx/tma340-005/Kconfig"
+	endif # SHTPS_TMA3XX_TMA340_005
+
+endif # TOUCHSCREEN_SHTPS

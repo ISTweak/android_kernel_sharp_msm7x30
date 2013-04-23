@@ -1,0 +1,15 @@
+#
+# SHLightSensor input device configuration
+#
+
+menu "SHLightSensor driver"
+
+comment "SHARP Light Sensor input device"
+
+config SHSENSORS_LIGHT
+	bool "SHLightSensor input device"
+	default y
+	help
+	  SHLightSensor Support.
+
+endmenu

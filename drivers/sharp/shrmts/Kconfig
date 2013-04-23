@@ -1,0 +1,15 @@
+#
+# SHRMTS device configuration
+#
+
+menu "SHRMTS driver"
+
+comment "SHARP RMTS drivers"
+
+config SHRMTS
+	bool "SHRMTS drivers"
+	default y
+	help
+	  Enable SHRMTS.
+
+endmenu

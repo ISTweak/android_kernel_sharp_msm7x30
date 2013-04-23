@@ -1,0 +1,23 @@
+# drivers/sharp/shkeyled/Kconfig
+
+menu "SHARP KEYLED Device Drivers"
+
+config LEDS_KEY_LED
+	bool "SHARP KEYLED Device Drivers"
+
+config LEDS_KEY_LED_PORT
+	int "SHARP KEYLED Device Port"
+	depends on LEDS_KEY_LED
+	default "0"
+	help
+	  KeyLED Port Setting.
+	    0: High current and Low current
+	    1: Low current
+	    2: LED_KEYPAD
+
+config LEDS_KEY_KEYBOARDLED
+	bool "SHARP KEYLED keyboard Device"
+	depends on LEDS_KEY_LED
+	default n
+
+endmenu

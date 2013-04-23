@@ -1,0 +1,42 @@
+config SH_YAS530
+	bool "SHARP compass Device Drivers"
+	depends on I2C
+
+config SH_YAS530_POSITION
+	int "YAS530 Mounting Position on Board"
+	depends on SH_YAS530
+	default "0"
+	help
+	  Chip mounting position (pin 1).
+	    0: top, upper-left
+	    1: top, upper-right
+	    2: top, lower-right
+	    3: top, lower-left
+	    4: bottom, upper-left
+	    5: bottom, upper-right
+	    6: bottom, lower-right
+	    7: bottom, lower-left
+
+config SH_YAS530_ORIENTATION
+	bool "YAS Orientation Sensor"
+	depends on SH_YAS530
+
+config SH_YAS530_ACCELEROMTER
+	tristate "YAS Acceleration Sensor"
+	depends on SH_YAS530
+
+config SH_YAS530_ACCELEROMETER_POSITION
+	int "YAS Acceleration Sensor Mounting Position on Board"
+	depends on SH_YAS530_ACCELEROMTER
+	default "0"
+	help
+	  Chip mounting position (pin 1).
+	    0: top, upper-left
+	    1: top, upper-right
+	    2: top, lower-right
+	    3: top, lower-left
+	    4: bottom, upper-left
+	    5: bottom, upper-right
+	    6: bottom, lower-right
+	    7: bottom, lower-left
+

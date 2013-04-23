@@ -1,0 +1,22 @@
+# drivers/sharp/wifi/Kconfig
+
+menu "Wi-Fi Configuration"
+
+config WIFIPM
+	bool "WLAN Power Management Support"
+	default y
+	help
+	  Power management implementation for WLAN Functionality.
+
+config SHWLAN_BCM4329_1
+	bool "BCM4329 WiFi device Support"
+	default y
+	help
+	  Enable BCM4329 WiFi device driver.
+
+config SHWLAN_BCM4330_1
+	bool "BCM4330 WiFi device Support"
+	default n
+	help
+	  Enable BCM4330 WiFi device driver.
+endmenu

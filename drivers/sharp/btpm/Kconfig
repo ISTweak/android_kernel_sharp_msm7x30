@@ -1,0 +1,11 @@
+# drivers/sharp/btpm/Kconfig
+
+menu "BT Configuration"
+
+config BTPM
+	bool "BT Power Management Support"
+	default y
+	help
+	  Power management implementation for BT Functionality.
+
+endmenu

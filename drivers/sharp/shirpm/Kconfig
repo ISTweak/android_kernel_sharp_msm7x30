@@ -1,0 +1,41 @@
+menu "SHARP Infrared drivers"
+
+config SHIRDA
+	bool "SHARP IrDA SIR/FIR driver"
+	default y
+	select SHIRPM
+
+config SHIRDA_1_04_XX
+	depends on SHIRDA
+	bool "Use Ver 1.04.xx"
+	default y
+
+config SHIRRC
+	bool "SHARP IrRemoteControl driver"
+	default y
+	select SHIRPM
+
+config SHIRPM
+	depends on SHIRDA || SHIRRC
+	bool "Infrared Power Management Support"
+	default y
+
+config SHIRPM_CTRL_LED_VCC
+	depends on SHIRPM
+	bool "Control IrDA Transceiver Power"
+	default n
+
+choice
+	bool "SHARP Infrared Device"
+	default SHARP_INFRARED_LR388J5
+	depends on SHIRDA || SHIRRC
+
+config SHARP_INFRARED_LR388G7
+	bool "LR388G7"
+
+config SHARP_INFRARED_LR388J5
+	bool "LR388J5"
+
+endchoice
+
+endmenu
