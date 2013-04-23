@@ -1,4 +1,4 @@
-Sharp‚Ìmsm7x30‚ÈƒJ[ƒlƒ‹
+Sharpã®msm7x30ãªã‚«ãƒ¼ãƒãƒ«
 ===========================
-IS14SH‚Ídeckard_af21_defconfig  
-C01‚Ídeckard_af30_defconfig  
+IS14SHã¯deckard_af21_defconfig  
+C01ã¯deckard_af30_defconfig  
